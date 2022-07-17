@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="js/main.js"></script>
+    <meta name="keywords" content="footer, address, phone, icons" />
+
+    <link rel="icon" type="image/ico" href="/images/logo.png" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
+
+    <title>Prisma</title>
   </head>
-  <body></body>
+  <body bgcolor="#f6f6f6">
+    <div class="se-pre-con"></div>
+    <nav>
+      <div>
+        <h2 class="logo">Prisma.</h2>
+      </div>
+      <ul class="header-menu">
+        <li>
+          <a href="#program_section"
+            ><span class="submit_button">Submit a Gradient</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div id="banner">
+      <div class="banner">
+        <div class="heading">Prisma.</div>
+        <div class="banner_name">
+          The internet’s source of freely-usable gradients.
+        </div>
+        <div class="banner_name">
+          Powered by creators <span>everywhere.</span>
+        </div>
+      </div>
+    </div>
+    <section class="main">
+      <div>
+        <center>
+          <ul type="none" id="list"></ul>
+        </center>
+      </div>
+    </section>
+    <div id="toast"><div id="desc">Done!</div></div>
+    <script>
+      $(window).load(function () {
+        // Animate loader off screen
+        setTimeout(removeLoader, 3000);
+        function removeLoader() {
+          $(".se-pre-con").fadeOut("slow");
+        }
+      });
+    </script>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img class="footer-logo" src="/images/colorhill.png" />
+
+        <p class="footer-company-name">Colorhill &copy; 2019</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span></span></p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p></p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com"></a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span></span>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/main.js"></script>
 </html>
