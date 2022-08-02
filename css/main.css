@@ -319,7 +319,13 @@ h6 {
   margin-top: 10px;
   width: 200px;
   height: 200px;
+  transition: 0.3s;
 }
+.grad:hover {
+  transform: scale(1.1);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
 .btn {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10px;

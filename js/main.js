@@ -161,3 +161,12 @@ function loadGradientItem() {
   }
 }
 loadGradientItem();
+
+function storeData() {
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var email = document.getElementById("email").value;
+  var hex1 = document.getElementById("hex1").value;
+  var hex2 = document.getElementById("hex2").value;
+  console.log(fname);
+}
