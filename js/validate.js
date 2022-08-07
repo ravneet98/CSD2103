@@ -56,7 +56,7 @@ $(document).ready(function () {
   });
 
   // After Form Submitted Validation
-  $("#gsubmit button").click(function (event) {
+  $("#gsubmit #submit").click(function (event) {
     var form_data = $("#gform").serializeArray();
     var re =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -92,23 +92,26 @@ $(document).ready(function () {
       alert("errors");
     } else {
       alert("No errors: Form will be submitted");
-      var data = [
-        {
-          fname: fname,
-          lname: lname,
-          email: email,
-          hex1: hex1,
-          hex2: hex2,
-        },
-      ];
+      var data = {
+        fname: fname,
+        lname: lname,
+        email: email,
+        hex: hex1 + "@" + hex2,
+      };
 
-      console.log(data);
-      var localGradients = localStorage.getItem("localGradients");
-      console.log(localGradients);
-      if (localGradients === null) {
-        localStorage.setItem("localGradients", JSON.stringify(data));
+      var existingGradients = JSON.parse(
+        localStorage.getItem("localGradients")
+      );
+      console.log(existingGradients);
+
+      if (existingGradients === null) {
+        existingGradients = [];
       }
-
+      console.log(existingGradients);
+      localStorage.setItem("entry", JSON.stringify(data));
+      existingGradients.push(data);
+      console.log(existingGradients);
+      localStorage.setItem("localGradients", JSON.stringify(existingGradients));
       event.preventDefault();
     }
   });

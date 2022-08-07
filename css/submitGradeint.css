@@ -118,3 +118,59 @@ input.valid,
 textarea.valid {
   border-bottom: 2px solid green;
 }
+
+footer {
+  display: block;
+  background-color: #212121;
+  text-align: center;
+  padding: 1%;
+  height: 20%;
+  height: auto;
+  margin-top: 10%;
+}
+.footer h3 {
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #fff;
+}
+.footer-socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.footer-socials li {
+  margin: 0 10px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.footer-socials a i {
+  font-size: 1.1rem;
+  width: 30px 30px;
+  transition: color 0.4s ease;
+}
+
+.footer-socials a:hover i {
+  color: #616161;
+}

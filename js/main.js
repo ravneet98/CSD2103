@@ -131,13 +131,23 @@ function loadGradientItem() {
     "#438aca@#dc47d2",
     "#d79c3d@#685b5e",
   ];
-  console.log(gradients);
+  var existingGradients = JSON.parse(localStorage.getItem("localGradients"));
+  for (var i in existingGradients) {
+    gradients.push(
+      existingGradients[i].hex +
+        "@" +
+        existingGradients[i].fname +
+        "@" +
+        existingGradients[i].lname
+    );
+  }
+  // console.log(gradients);
   for (var i = 0; i <= gradients.length; i++) {
-    var x;
     var res = gradients[i].split("@");
+    var text = res.length > 2 ? res[2] + " " + res[3] : i;
     var a1 =
       "<li><div class='card'><p class = 'num'>" +
-      i +
+      text +
       "</p><div class='grad' style=' background-image: linear-gradient(" +
       res[0] +
       "," +
@@ -151,7 +161,10 @@ function loadGradientItem() {
       "</p>" +
       "</div></div><button id=" +
       i +
-      " class='btn' onclick='copyGradient(this.id)'><p class='hex'>Copy CSS</p></button></li>";
+      " class='btn' onclick='copyGradient(this.id)'><i class='fa fa-css3' style='color:#424242' aria-hidden='true'></i></button> <button id=" +
+      i +
+      " class='btn' onclick='download(this.id)'><i class='fa fa-arrow-circle-o-down' style='color:#424242' aria-hidden='true'></i></button></li > ";
+
     var g;
     g = document.createElement("li");
     g.id = i;
@@ -169,4 +182,20 @@ function storeData() {
   var hex1 = document.getElementById("hex1").value;
   var hex2 = document.getElementById("hex2").value;
   console.log(fname);
+}
+
+function download(id) {
+  var copyText = document.getElementById("hex" + id).innerHTML;
+  var el = document.createElement("input");
+  var color = copyText.split(" → ");
+  console.log(color);
+  window
+    .open(
+      "./image.html?hex=" +
+        color[0].substring(1, 7) +
+        "@" +
+        color[1].substring(1, 7),
+      "_blank"
+    )
+    .focus();
 }

@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/ico" href="/images/logo.png" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -21,7 +22,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/validate.js"></script>
     <script src="./js/main.js"></script>
-    <title>Colorhill | Submit Gradient</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Prisma | Submit Gradient</title>
   </head>
   <body bgcolor="#f6f6f6">
     <div class="content">
@@ -40,6 +45,7 @@
                   method="post"
                   id="gform"
                   name="form"
+                  onsubmit="return false"
                 >
                   <div class="row">
                     <div class="col-md-6 form-group">
@@ -101,7 +107,14 @@
                       <div id="gsubmit">
                         <button
                           class="btn btn-primary rounded-0 py-2 px-4"
+                          type="button"
+                        >
+                          <a href="./index.html" style="color: white">Back</a>
+                        </button>
+                        <button
+                          class="btn btn-primary rounded-0 py-2 px-4"
                           type="submit"
+                          id="submit"
                         >
                           Submit
                         </button>
@@ -130,5 +143,33 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="footer-content">
+        <p>
+          Prisma is a free collection of 100+ linear gradients that you can use
+          as content backdrops in any part of your website. Easy copy CSS3
+          crossbrowser code and use it in a moment!
+        </p>
+      </div>
+      <ul class="footer-socials">
+        <li>
+          <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.google.com"><i class="fa fa-google-plus"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com"
+            ><i class="fa fa-linkedin-square"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
