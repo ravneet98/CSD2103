@@ -110,7 +110,7 @@ $(document).ready(function () {
       localStorage.setItem("entry", JSON.stringify(data));
       existingGradients.push(data);
       localStorage.setItem("localGradients", JSON.stringify(existingGradients));
-      alert("Success!! Gradients submitted successfully");
+      alert("Success!! Gradient submitted successfully");
     }
   });
 });
