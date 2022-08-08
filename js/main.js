@@ -191,7 +191,7 @@ function download(id) {
   console.log(color);
   window
     .open(
-      "./image.html?hex=" +
+      "./templates/image.html?hex=" +
         color[0].substring(1, 7) +
         "@" +
         color[1].substring(1, 7),

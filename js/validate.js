@@ -89,9 +89,8 @@ $(document).ready(function () {
     }
     if (!error_free) {
       event.preventDefault();
-      alert("errors");
+      alert("Please enter valid input");
     } else {
-      alert("No errors: Form will be submitted");
       var data = {
         fname: fname,
         lname: lname,
@@ -110,9 +109,8 @@ $(document).ready(function () {
       console.log(existingGradients);
       localStorage.setItem("entry", JSON.stringify(data));
       existingGradients.push(data);
-      console.log(existingGradients);
       localStorage.setItem("localGradients", JSON.stringify(existingGradients));
-      event.preventDefault();
+      alert("Success!! Gradients submitted successfully");
     }
   });
 });
